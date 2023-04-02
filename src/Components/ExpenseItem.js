@@ -1,26 +1,26 @@
 import './ExpenseItem.css'
-//So how is a component written?
-//Look at App.js. A component in REACT is just a
-//JAVASCRIPT FUNCTION (which return jsx code)
-//ie
 
-function ExpenseItem() {
-    //
-    const expenseDate = new Date(2021, 2, 28);//We use JavaScript to get the values for the reusable components.
-    const expenseTitle = 'Car Insurance'; //We use {} inside the JSX elements to display dynamic javascript data.
-    const expensePrice = 421.00; //Inside the {}, we can run basic JavaScript expressions. Ex: 1+1; 
+//We can use a parameter in the component function (props) to collect all the parameters received in the JSX in App.js
+//props is an object which holds all the values we get from the tag attributes in App.js
+//The data in props will be in the form of key,value pairs. Keys are the attribute name (ie title, amount and date). Values will of course be the values set.
+function ExpenseItem(props) {
+    //HARDCODED javascript no longer needed here.
+    // const expenseDate = new Date(2021, 2, 28);
+    // const expenseTitle = 'Car Insurance'; 
+    // const expensePrice = 421.00;
     return (
         // Remember to always have a single root element. IE: This div below in which all other elements are contained.
         <div className='expense-item'>
-            <div>{String(expenseDate)}</div>
+            <div>{String(props.date)}</div>
             <div className='expense-item__description'> 
-                <h3>{expenseTitle}</h3>
-                <div className='expense-item__price'>${expensePrice}</div>   
+                <h3>{props.title}</h3>
+                <div className='expense-item__price'>${props.amount}</div>   
             </div>   
         </div>
     )
 }
-//However, in order to make the component truly reusable, we can't hardcode data into the component.
-//We have to use props. The data shouldn't be stored here in the component, but in App.js
+//Props are essential in having reusable components in react. It allows us to take in external values outside of the component and use it in the
+//execution of the component.
+
 
 export default ExpenseItem;
