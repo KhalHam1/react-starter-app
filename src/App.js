@@ -10,6 +10,7 @@ function App() {
       {/* Elements starting with an Uppercase character
       are understood to be developer-made elements */}
       <ExpenseItem></ExpenseItem>
+      <ExpenseItem></ExpenseItem>
     </div>
   );
 }
