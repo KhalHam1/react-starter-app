@@ -8,10 +8,18 @@ function ExpenseItem(props) {
     // const expenseDate = new Date(2021, 2, 28);
     // const expenseTitle = 'Car Insurance'; 
     // const expensePrice = 421.00;
+    const month = props.date.toLocaleString('en-US', {month: 'long'});
+    const day = props.date.toLocaleString('en-US', {day: '2-digit'});
+    const year = props.date.getFullYear();
     return (
         // Remember to always have a single root element. IE: This div below in which all other elements are contained.
         <div className='expense-item'>
-            <div>{String(props.date)}</div>
+            <div>
+                {/* {props.date.toISOString()} */}
+                <div>{month}</div>
+                <div>{year}</div>
+                <div>{day}</div>
+            </div>
             <div className='expense-item__description'> 
                 <h3>{props.title}</h3>
                 <div className='expense-item__price'>${props.amount}</div>   
