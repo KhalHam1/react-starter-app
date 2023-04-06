@@ -12,10 +12,5 @@ function ExpenseItem(props) {
         </div>
     )
 }
-//KEEP TRACK OF HOW THE DATE IS PASSED ON AS A PROP FROM App.js THEN TO ExpenseItem.js AND FINALLY TO ExpenseDate.js.
-//Props can be used to send data through many components.
-//The ExpenseDate component is now nested inside the ExpenseItem component.
-//Thus, the component tree takes shape.
-
 
 export default ExpenseItem;
