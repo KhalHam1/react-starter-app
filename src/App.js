@@ -1,5 +1,5 @@
 import React from "react";
-import Expenses from "./Components/Expenses";
+import Expenses from "./Components/Expenses/Expenses";
 
 function App() {
   const expenses = [
@@ -22,7 +22,7 @@ function App() {
   // );
   //This should clearly show as well why a root element is always needed. 
   //It's so that the JSX code can accurately be ported over to the React.createElement method.
-  
+
   return (
     <div>
       <h2>Let's get started!</h2>
